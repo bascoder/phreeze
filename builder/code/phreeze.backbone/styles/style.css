@@ -20,17 +20,9 @@ p.buttonContainer {
 
 }
 
-.tableContainer {
-	  overflow: auto;
-	  width: 940px; /* add responsive parts in bootstrap.css */
-	  border: 2px solid #333;
-	  border-radius: 4px;
-	  padding:0px;
-}	
-
 table { 
-width:auto !important; 
-margin-bottom:0px !important; 
+	width:auto !important; 
+	margin-bottom:0px !important; 
 }
 
 table.collection tr:hover {
@@ -40,6 +32,14 @@ table.collection tr:hover {
 table.collection th:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+
+.tableContainer {
+	  overflow: auto;
+	  width: 940px; /* add responsive parts in bootstrap.css */
+	  border: 2px solid #333;
+	  border-radius: 4px;
+	  padding:0px;
 }
 
 .date-picker input
@@ -108,4 +108,16 @@ span.help-inline {
 /* fixes spacing glitch with combo-box followed by an empty inline help */
 span.help-inline:empty {
 	display: none;
+}
+
+@media(min-width:1200px) {
+	.tableContainer{width:1170px}	
+}
+
+@media(min-width:768px) and (max-width:979px) {
+	.tableContainer{width:724px}
+}
+
+@media(max-width:767px) {
+	.tableContainer{width:100%}
 }
