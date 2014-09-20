@@ -36,6 +36,7 @@
 
 	<!-- underscore template for the collection -->
 	<script type="text/template" id="{$singular|lcfirst}CollectionTemplate">
+	<div class="tableContainer">
 		<table class="collection table table-bordered table-hover">
 		<thead>
 			<tr>
@@ -50,6 +51,7 @@
 			</tr>
 		</thead>
 		<tbody>
+	</div>
 		<% items.each(function(item) {ldelim} %>
 			<tr id="<%= _.escape(item.get('{$table->GetPrimaryKeyName()|studlycaps|lcfirst}')) %>">
 {foreach from=$table->Columns item=column name=columnsForEach}
