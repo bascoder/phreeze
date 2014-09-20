@@ -56,7 +56,6 @@
 				<td><%= _.escape(item.get('{$column->NameWithoutPrefix|studlycaps|lcfirst}') || '') %></td>
 {/if}
 {/foreach}
-
 			</tr>
 		<% {rdelim}); %>
 		</tbody>
