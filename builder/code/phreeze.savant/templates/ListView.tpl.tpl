@@ -35,20 +35,14 @@
 		<thead>
 			<tr>
 {foreach from=$table->Columns item=column name=columnsForEach}
-{if $smarty.foreach.columnsForEach.index == 5}<!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
-{/if}
 				<th id="header_{$column->NameWithoutPrefix|studlycaps}">{$column->NameWithoutPrefix|underscore2space}<% if (page.orderBy == '{$column->NameWithoutPrefix|studlycaps}') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 {/foreach}
-{if $smarty.foreach.columnsForEach.index >= 5}-->
-{/if}
 			</tr>
 		</thead>
 		<tbody>
 		<% items.each(function(item) {ldelim} %>
 			<tr id="<%= _.escape(item.get('{$table->GetPrimaryKeyName()|studlycaps|lcfirst}')) %>">
 {foreach from=$table->Columns item=column name=columnsForEach}
-{if $smarty.foreach.columnsForEach.index == 5}<!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
-{/if}
 {if $column->Type == "date"}
 				<td><%if (item.get('{$column->NameWithoutPrefix|studlycaps|lcfirst}')) { %><%= _date(app.parseDate(item.get('{$column->NameWithoutPrefix|studlycaps|lcfirst}'))).format('MMM D, YYYY') %><% } else { %>NULL<% } %></td>
 {elseif $column->Type == "datetime" ||  $column->Type == "timestamp"}
@@ -59,8 +53,6 @@
 				<td><%= _.escape(item.get('{$column->NameWithoutPrefix|studlycaps|lcfirst}') || '') %></td>
 {/if}
 {/foreach}
-{if $smarty.foreach.columnsForEach.index >= 5}-->
-{/if}
 			</tr>
 		<% {rdelim}); %>
 		</tbody>
