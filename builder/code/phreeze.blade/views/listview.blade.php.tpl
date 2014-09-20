@@ -34,6 +34,7 @@
 
 	<!-- underscore template for the collection -->
 	<script type="text/template" id="{$singular|lcfirst}CollectionTemplate">
+	<div class="tableContainer">
 		<table class="collection table table-bordered table-hover">
 		<thead>
 			<tr>
@@ -60,6 +61,7 @@
 		<% {rdelim}); %>
 		</tbody>
 		</table>
+	</div>
 
 		<%=  view.getPaginationHtml(page) %>
 	</script>
