@@ -20,6 +20,19 @@ p.buttonContainer {
 
 }
 
+.tableContainer {
+	  overflow: auto;
+	  width: 940px; /* add responsive parts in bootstrap.css */
+	  border: 2px solid #333;
+	  border-radius: 4px;
+	  padding:0px;
+}	
+
+table { 
+width:auto !important; 
+margin-bottom:0px !important; 
+}
+
 table.collection tr:hover {
     cursor: pointer;
 }
