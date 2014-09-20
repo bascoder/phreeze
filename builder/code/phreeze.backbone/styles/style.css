@@ -111,13 +111,13 @@ span.help-inline:empty {
 }
 
 @media(min-width:1200px) {
-	.tableContainer{width:1170px}	
+	.tableContainer{width:1170px;}	
 }
 
 @media(min-width:768px) and (max-width:979px) {
-	.tableContainer{width:724px}
+	.tableContainer{width:724px;}
 }
 
 @media(max-width:767px) {
-	.tableContainer{width:100%}
+	.tableContainer{width:100%;}
 }
