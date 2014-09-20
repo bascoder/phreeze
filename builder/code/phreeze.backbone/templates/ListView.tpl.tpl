@@ -46,7 +46,6 @@
 			</tr>
 		</thead>
 		<tbody>
-	</div>
 		<% items.each(function(item) {ldelim} %>
 			<tr id="<%= _.escape(item.get('{$table->GetPrimaryKeyName()|studlycaps|lcfirst}')) %>">
 {foreach from=$table->Columns item=column name=columnsForEach}
@@ -64,6 +63,7 @@
 		<% {rdelim}); %>
 		</tbody>
 		</table>
+	</div>
 
 		<%=  view.getPaginationHtml(page) %>
 	</script>
